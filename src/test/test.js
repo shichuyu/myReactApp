@@ -2,49 +2,19 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 17:50:01
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-08 18:45:25
+ * @LastEditTime: 2020-06-08 21:11:12
  * @Description: 
  */ 
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-class Test extends React.Component {
-  // constructor(props){
-  //   super(props)
-  //   this.state = props
-  // }
-  renderSidebar() {
-    return (
-      // <ul>
-      //   {this.props.posts.map((post) =>
-      //     <li key={post.id}>
-      //       {post.title}
-      //     </li>
-      //   )}
-      // </ul>
-      
-    <div>tywd</div>
-    )
-  };
-  
-  renderContent() {
-    return (
-    //   <div key={this.props.post.id}>
-    //    <h3>{this.props.post.title}</h3>
-    //    <p>{this.props.post.content}</p>
-    //  </div>
-    <div>tywd</div>
-    )
-  };
+import React,{Component} from 'react';
+class Test extends Component {
   render(){
     return (
       <div>
-        {this.renderSidebar}
-      <hr />
-        {this.renderContent}
+        <p className="dalao">社会我{this.props.name}，我{this.props.name}牛逼</p>
+        天宇无敌
       </div>
-    );
+    )
   }
 }
 
-export default Test
+export default Test;
