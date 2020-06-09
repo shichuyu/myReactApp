@@ -2,7 +2,7 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 21:04:41
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-09 11:26:13
+ * @LastEditTime: 2020-06-09 18:10:37
  * @Description: 
  */ 
 import React from 'react';
@@ -47,7 +47,7 @@ class Game extends React.Component {
       const desc = move ?
         'Go to move #' + move : 'Go to game start';
         return(
-          <li key={move}>>
+          <li key={move}>
             <button onClick={() => this.jumpTo(move)}>{desc}</button>
           </li>
         )

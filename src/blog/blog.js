@@ -2,7 +2,7 @@
  * @Author: shichuyu
  * @Date: 2020-06-09 14:36:32
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-09 14:42:48
+ * @LastEditTime: 2020-06-09 18:09:44
  * @Description: 
  */ 
 import React from 'react';
@@ -31,12 +31,12 @@ import React from 'react';
   );
 } */
 class Blog extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      val: 'ty'
-    }
-  }
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //     val: 'ty'
+  //   }
+  // }
 
   render(){
     const sidebar = (
