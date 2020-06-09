@@ -2,11 +2,10 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 21:04:41
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-08 21:08:13
+ * @LastEditTime: 2020-06-09 11:26:13
  * @Description: 
  */ 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './game.css';
 import Board from '../board/board'
 
@@ -70,7 +69,7 @@ class Game extends React.Component {
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>{/* TODO */}</ol>
+          <ol>{moves}</ol>
         </div>
       </div>
     );

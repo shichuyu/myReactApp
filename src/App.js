@@ -2,19 +2,25 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 17:55:49
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-08 21:08:48
+ * @LastEditTime: 2020-06-09 14:38:52
  * @Description: 
  */ 
-import React,{Component} from 'react';
-import logo from './logo.svg';
+import React from 'react';
+// import logo from './logo.svg';
 import './App.css';
 import Game from './game/game'
+import Blog from './blog/blog'
 // import Test from './test/test'
 
 function App() {
+  const posts = [
+    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+  ];
   return (
     <div className="App">
       <Game />
+      <Blog posts={posts} />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

@@ -2,11 +2,10 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 18:49:11
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-08 18:51:01
+ * @LastEditTime: 2020-06-09 11:22:49
  * @Description: 
  */ 
 import React from 'react';
-import ReactDOM from 'react-dom';
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
