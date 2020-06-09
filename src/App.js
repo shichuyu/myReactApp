@@ -10,6 +10,7 @@ import React from 'react';
 import './App.css';
 import Game from './game/game'
 import Blog from './blog/blog'
+import NameForm from './nameForm/nameForm'
 // import Test from './test/test'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <Game />
       <Blog posts={posts} />
+      <NameForm />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
