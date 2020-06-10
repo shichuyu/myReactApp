@@ -2,7 +2,7 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 17:55:49
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-10 15:20:15
+ * @LastEditTime: 2020-06-10 18:03:41
  * @Description: 
  */ 
 import React from 'react';
@@ -13,6 +13,7 @@ import Blog from './blog/blog'
 import NameForm from './nameForm/nameForm'
 import Reservation from './nameForm/reservation'
 import Calculator from './calculator/calculator'
+import FilterableProductTable from './searchApp/searchApp'
 // import Test from './test/test'
 
 function App() {
@@ -20,9 +21,18 @@ function App() {
     {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
     {id: 2, title: 'Installation', content: 'You can install React from npm.'}
   ];
+
+  const PRODUCTS = [
+    {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+    {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+    {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+    {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+    {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+    {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+  ];
   return (
     <div className="App">
-      <Game />
+      {/* <Game />
       <Blog posts={posts} />
       
       <NameForm />
@@ -35,7 +45,9 @@ function App() {
       <div>
         <h2>状态提升</h2>
         <Calculator />
-      </div>
+      </div> */}
+
+      <FilterableProductTable products={PRODUCTS} />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
