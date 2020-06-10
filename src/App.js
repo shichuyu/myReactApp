@@ -2,7 +2,7 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 17:55:49
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-09 14:38:52
+ * @LastEditTime: 2020-06-10 15:20:15
  * @Description: 
  */ 
 import React from 'react';
@@ -11,6 +11,8 @@ import './App.css';
 import Game from './game/game'
 import Blog from './blog/blog'
 import NameForm from './nameForm/nameForm'
+import Reservation from './nameForm/reservation'
+import Calculator from './calculator/calculator'
 // import Test from './test/test'
 
 function App() {
@@ -22,7 +24,18 @@ function App() {
     <div className="App">
       <Game />
       <Blog posts={posts} />
+      
       <NameForm />
+
+      <div>
+        <h2>处理多个输入</h2>
+        <Reservation />
+      </div>
+
+      <div>
+        <h2>状态提升</h2>
+        <Calculator />
+      </div>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

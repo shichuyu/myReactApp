@@ -2,14 +2,17 @@ import React from 'react';
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      value: '',
+      arr_value: ['葡萄柚','酸橙','椰子','芒果']
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    console.log(event)
+    console.log(event.target)
     console.log(event.target.value)
     console.log(event.target.type)
     this.setState({value: event.target.value});
@@ -31,17 +34,17 @@ class NameForm extends React.Component {
           文章:
           <textarea value={this.state.value} onChange={this.handleChange} />
         </label> */}
-        <label>
+        {/* <label>
           选择你喜欢的风味:
-          <select multiple={true} value={this.state.value} onChange={this.handleChange}>
+          <select value={this.state.value} onChange={this.handleChange}>
             <option value="default">请选择</option>
-            <option value="grapefruit">葡萄柚</option>
-            <option value="lime">酸橙</option>
-            <option value="coconut">椰子</option>
-            <option value="mango">芒果</option>
+            {this.state.arr_value.map((value,index) => <option key={index} value={value}>{value}</option>)}
           </select>
-        </label>
+        </label> */}
         <input type="submit" value="提交" />
+        <div>
+          <input type="file" />
+        </div>
       </form>
     );
   }
