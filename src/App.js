@@ -2,25 +2,25 @@
  * @Author: shichuyu
  * @Date: 2020-06-08 17:55:49
  * @LastEditors: shichuyu
- * @LastEditTime: 2020-06-10 18:03:41
+ * @LastEditTime: 2020-06-11 14:54:24
  * @Description: 
  */ 
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Game from './game/game'
-import Blog from './blog/blog'
-import NameForm from './nameForm/nameForm'
-import Reservation from './nameForm/reservation'
-import Calculator from './calculator/calculator'
+// import Game from './game/game'
+// import Blog from './blog/blog'
+// import NameForm from './nameForm/nameForm'
+// import Reservation from './nameForm/reservation'
+// import Calculator from './calculator/calculator'
 import FilterableProductTable from './searchApp/searchApp'
 // import Test from './test/test'
 
 function App() {
-  const posts = [
-    {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
-    {id: 2, title: 'Installation', content: 'You can install React from npm.'}
-  ];
+  // const posts = [
+  //   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  //   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+  // ];
 
   const PRODUCTS = [
     {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
