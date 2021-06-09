@@ -128,14 +128,14 @@ class Game extends React.Component {
   handleClick(i) {
     // const history = this.state.history;
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
-    const current = history[history.length - 1];
+    const current = history[history.length - 1]; // 当前最新的井字棋组合
     const squares = current.squares.slice(); // 每次点击则拷贝一个副本，并将对应点击的值 改变 squares[i] == 'changeVal' X or O
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
     squares[i] = this.state.xIsNext ? 'X' : 'O'; 
     this.setState({
-      history: history.concat([{
+      history: history.concat([{ // 合并最新的棋盘
         squares: squares,
       }]),
       stepNumber: history.length,
@@ -144,8 +144,8 @@ class Game extends React.Component {
   }
   jumpTo(step) {
     this.setState({
-      stepNumber: step,
-      xIsNext: (step % 2) === 0,
+      stepNumber: step, // 记录历史记录步骤
+      xIsNext: (step % 2) === 0, // 初始为0，下的 X，则 偶数均为 xIsNext: true
     });
   }
   render() {
@@ -154,7 +154,9 @@ class Game extends React.Component {
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
-    const moves = history.map((step, move) => {
+    // array.map(function(currentValue,index,arr), thisValue)
+    const moves = history.map((step, move, arr) => {
+      console.log('move: ', step, move, arr);
       const desc = move ?
         'Go to move #' + move :
         'Go to game start';
@@ -165,7 +167,7 @@ class Game extends React.Component {
       );
     });
 
-    let status;
+    let status; // 显示当前下棋者 or 胜者
     if (winner) {
       status = 'Winner: ' + winner;
     } else {
